@@ -7,6 +7,54 @@
     <title>padding_内边距</title>
 </head>
 <body>
-    
+    <!--
+        padding用于表示内边距，和上一节课所说的外边距类似，
+        但是含义相反。
+        定义：内边距也是表示HTML标签在网页中所占据的空间大
+        小，但是是指标签内部的空间。
+
+        padding也拥有四个参数值：分别是（上、右、下、左）
+        
+        例：
+        父标签（class名为per）内部存在一个子标签
+        子标签（class名为son）
+        为了避免子标签贴近父标签，父标签需要将子标签隔开一段
+        距离
+    -->
+
+    <style>
+      .per{
+          width: 200px;
+          height: 200px;
+          border: 2px solid #000;
+          padding: 20px 0 0 0; /* per的上内边距为20px */
+      }
+
+      .son{
+          width: 50px;
+          height: 50px;
+          background: red;
+      }
+    </style>
+
+    <div class="per">
+        <div class="son"></div>
+    </div>
+
+    <!--
+        以上示例中，我们可以看到son标签相较于per标签
+        的内部顶边发生了位置的偏移。padding的作用是让
+        标签内部增加一定的空白空间（此空间不允许其他标
+        签占据）
+
+        padding和margin一样，都可以进行简写：
+        1. 如果padding存在四个相同的参数，可以直接简
+        写成一个。
+           padding: 0 0 0 0; 等同于 padding: 0;
+        2. 如果padding存在四个参数且成对，可以直接简
+        写成如下：
+           padding: 0 20px 0 20px; 等同于
+           padding: 0 20px;   
+    -->
 </body>
 </html>

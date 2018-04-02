@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>块标签、内联标签、内联块状标签</title>
+</head>
+<body>
+    <!--
+        网页中的标签存在两种状态：块标签与内联标签
+        定义：
+           1.块标签可以设置宽度和高度，并默认在横向单独
+             占据一行。
+           2.内联标签无法设置宽度和高度，多个内联标签在
+             横向呈队列排列，直到横向空间不够，才被迫挤
+             到第二排。  
+           3.内联块状标签综合了以上两种标签的特性，既可
+             以设置每个标签的大小，并且也能实现横向队列
+             排列。
+
+           我们在示例中使用到的块标签、内联标签、内联块标
+           签分别为（div、span、img）,因为本系列并非HTML
+           教程，我们不对标签含义作详细解释。
+    -->
+
+   <style>
+     div{
+         width: 100px;
+         height: 100px;
+         background: red;
+         margin: 20px;
+     }
+
+     span{
+         width: 100px;
+         height: 100px;
+         background: blue;
+         margin: 20px;         
+     }
+
+     img{
+         width: 50px;
+         height: 50px;
+     }
+   </style>
+
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <span>测试字体0001</span>
+    <span>测试字体0002</span>
+    <span>测试字体0003</span>
+
+    <img src="test.gif" alt="">
+    <img src="test.gif" alt="">
+    <img src="test.gif" alt="">
+
+    <!--
+        如果我们不满意标签的自有块状或者内联特性，我们
+        可以利用样式进行改造。
+        display属性用于设置标签的显示状态
+           block表示块状
+           inline表示内联
+           inline-block 表示同时拥有内联和块状特性
+    -->
+
+    <style>
+        .test{
+            display: inline-block;
+        }
+    </style>
+
+    <div class="test"></div>
+    <div class="test"></div>
+    <div class="test"></div>
+</body>
+</html>

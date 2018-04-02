@@ -65,6 +65,30 @@
         margin是指HTML标签在网页中所占据的空间大小，而并
         非是HTML标签在网页中的偏移，margin空白处无法再放
         置其他标签。  
+
+        关于纵向合并：
+        如果纵向多标签都存在外边距属性，纵向上的边距并不会叠
+        加，而是会选择最大的纵向边距进行合并。
     -->
+
+    <style>
+        .test3{
+            width: 100px;
+            height: 100px;
+            background: green;
+            margin:30px;
+        }
+
+        .test4{
+            width: 100px;
+            height: 100px;
+            background: pink;
+            margin:80px;            
+        }
+      </style>
+      <div class="test3"></div>
+      <div class="test4"></div>
+
+
 </body>
 </html>

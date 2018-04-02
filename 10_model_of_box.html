@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>盒子模型</title>
+</head>
+<body>
+    <!--
+        盒子模型定义：盒子模型表示HTML标签在网页中所
+        占据的空间大小，这部分空间大小由外边距、内边距
+        、标签的宽高、边框粗细共同构成，例：
+    -->
+
+    <style>
+       .box{
+           width: 200px;
+           height: 200px;
+           background: red;
+           margin: 10px;
+           padding: 10px;
+           border: 5px solid #000;
+       }
+    </style>
+
+    <div class="box"></div>
+
+    <!--
+        关于副作用：
+           1. 在父标签内部的子标签上使用margin的时候，会
+           产生冒泡行为，导致父标签也拥有了子标签的margin
+           值。
+
+           2. 在HTML标签上使用padding属性的时候，因为属
+           性padding是在HTML标签上新开辟的空间，所以会使
+           得HTML标签（横向/纵向）变大。
+           
+           我们在其他小节里会讨论到相关的解决方案。
+    -->
+</body>
+</html>
