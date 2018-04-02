@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>style样式标签</title>
+</head>
+<body>
+    <!--
+    style标签用于在HTML标签之外进行样式编写，并且style标签
+    可以放置在HTML的任何位置。
+
+    样式标签可以在一定程度上减少内嵌样式的带来的体积冗余问题，
+    样式标签由成对的style标签组成，并通过HTML标签名来调用样
+    式我们可以在HTML中任何位置编写style标签，书写格式如下例：
+    --> 
+    <style>
+        div{
+            color: red;
+        }
+    </style>
+    <div>Hello World !</div>   
+
+    <!--
+    但是通过HTML标签名去实现样式调用会带来一些问题，比如说无法
+    区分不同的标签调用不同的样式(在公共样式中编写多个同属性样式
+    时，后面的样式会覆盖前面的),例：
+    -->
+
+    <style>
+       div{
+           color: red;
+       }
+
+       div{
+           color: blue;
+       }
+    </style>
+
+    <div>test_01</div>
+    <div>test_02</div>
+</body>
+</html>

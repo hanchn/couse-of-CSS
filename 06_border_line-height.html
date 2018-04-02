@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>边框与行高</title>
+</head>
+<body>
+  <!--
+    border：定义标签的边框，
+    （边框属性值有多个例如：边框的样式、边框的粗细、
+    边框的颜色等）
+    line-height：定义（块）标签中文字的行高，如果
+    行高恰好与HTML标签高度相等，则表示文字在HTML标
+    签中居中。
+  -->
+  <style>
+    .test1{
+      width: 100px;
+      height: 40px;
+      line-height: 40px;
+      color: red;
+      border-width: 1px; /* 边框粗细 */
+      border-color: blue; /* 边框颜色 */
+      border-style: dashed; /* 边框样式（是实线、虚线等） */
+    }
+  </style>
+
+  <div class="test1">
+    Hello World !
+  </div>
+
+  <!--
+    关于简写：
+    样式允许简写，例如涉及border的多个属性，我们可以用
+    以下方式进行简写，以减少代码冗余，例：
+  -->
+
+  <style>
+     .test2{
+      width: 100px;
+      height: 40px;
+      line-height: 40px;
+      color: red;
+      border: 1px solid #000; 
+      /*
+      以上简写含义如下：
+      border-width: 1px;
+      border-style: solid;
+      border-color: #000;
+      */
+     }
+  </style>
+
+  <div class="test2">
+    简写测试
+  </div>
+</body>
+</html>

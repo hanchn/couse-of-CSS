@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>background</title>
+</head>
+<body>
+    <!--
+    background用于表示（块）标签的背景，背景的属性值
+    有很多，例：背景颜色、背景图片、背景平铺状态、背景
+    尺寸等。
+    -->
+
+    <style>
+    .test01{
+      width: 100px;  
+      height: 100px;
+      background-color: black; 
+    }
+    </style>
+
+    <div class="test01"></div>
+
+    <!--
+        以下示例用于在（块）标签中引入背景图片
+        background-image: url('图片地址'); 
+    -->
+
+    <style>
+      .test02{
+          width: 200px;
+          height: 200px;
+          background: url("test.gif");
+      }
+    </style>
+    <div class="test02"></div>
+
+    <!--
+        在背景图大小小于标签大小的情况下，背景
+        图会自动平铺，直到铺满为止。如果想认为
+        干涉样式的自动平铺行为，我们可以使用以
+        下属性，进行控制。
+        background-repeat: no-repaet; 
+        no-repat表示不平铺，在不设置平铺状态
+        的情况下，背景图自动平铺。
+    -->
+
+    <style>
+        .test03{
+            width: 200px;
+            height: 200px;
+            background: url("test.gif");
+            background-repeat: no-repaet; 
+        }
+    </style>
+    <div class="test03"></div>
+
+    <!--
+        我们还可以利用以下属性用于设置图片位置
+        横向位置可以用像素，进行位置偏移，或者使用状态进行控制。
+        横向：（left、center、right）
+        纵向：（top、center、bottom）
+    -->
+
+    <style>
+        .test04{
+            width: 200px;
+            height: 200px;
+            background: url("test.gif");
+            background-repeat: no-repaet; 
+            background-position: left center; /* x、y位置用空格进行分隔 */
+        }
+    </style>
+    <div class="test04"></div>   
+
+    <!--
+        如果当前图片尺寸远小于标签大小，但又不愿意平铺，我们可以
+        使用size属性进行调整，例：
+        background-size:(cover,contain)
+        
+            cover：会拉伸背景图，直到X、Y轴全部铺满标签为止
+            contain：会拉伸背景图，直到X或者Y轴铺满为止
+    -->
+
+    <style>
+        .test05{
+            width: 200px;
+            height: 200px;
+            background: url("test.gif");
+            background-repeat: no-repaet; 
+            background-size: cover; 
+        }
+    </style>
+    <div class="test05"></div>      
+
+    <!--
+        背景图的所有属性都可以进行组合简写
+        background: url('img') center top/10px 20px  no-repeat;
+    -->
+
+    <style>
+        .test06{
+            width: 200px;
+            height: 200px;
+            background: url("test.gif") center center/ 20px 30px no-repeat #347623;
+        }
+    </style>
+    <div class="test06"></div>   
+    
+    <!--
+        在更高级的CSS中（CSS3），样式中的背景允许多图片叠加、
+        同时允许叠加颜色值。
+    -->
+</body>
+</html>
