@@ -78,7 +78,56 @@
     <div class="dd"></div>    
     
     <!--
-        定位
+        3. 相对定位能力较弱，具备层级特性，且可以结合偏移属性，
+        进行移动（初始位置为网页左上角）。
+        4. 拥有绝对定位属性的标签，浮动属性将失效，可以在网页
+        中任意位置进行位移（初始位置为网页左上角，如果父标签也
+        具有定位属性，初始位置为父标签左上角）。
     -->
+
+    <style>
+        .ee{
+            width: 200px;
+            height: 200px;
+            background: red;
+            position: relative;
+            left: 100px;
+            top: 100px;
+            z-index: 1;
+        }
+
+        .ff{
+            width: 100px;
+            height: 100px;
+            background: blue;
+            position: absolute;
+            top: 40px;
+            left: 40px;
+        }
+                
+    </style>
+
+    <div class="ee">
+       <div class="ff"></div>
+    </div>
+
+    <!--
+        固定定位不受制于任何属性，可以固定在网页“窗口”的任意
+        区域，也可以使用z-index进行层级设置，并且结合位置属
+        性进行移动，常用于实现锚点跟随，对联广告等功能。
+    -->
+
+    <style>
+    .fixed{
+        width: 100px;
+        height: 100px;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        background: #000;
+    }
+    </style>
+         
+    <div class="fixed"></div>     
 </body>
 </html>
