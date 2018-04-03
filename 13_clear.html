@@ -37,5 +37,45 @@
     <div class="aa"></div>
     <div class="bb"></div>
 
+
+    <!--
+        父标签中浮动的子标签脱离了标准布局流，使得父标签塌陷。
+        所以我们需要把浮动的标签“围住”，使得父标签能够得到所
+        有子元素的垂直高度。
+        我们可以为父标签中最后一个子标签添加清除浮动以此来得
+        到垂直高度。
+    -->
+
+    <style>
+       .per{
+         width: 500px;
+         height: auto;
+         border: 3px solid #000;
+       }
+
+       .son{
+          width: 100px;
+          height: 100px;
+          background: red;
+          margin: 20px;
+       }
+
+       .emp{
+           clear: both;
+       }
+    </style>
+
+    <div class="per">
+        <div class="per"></div>
+        <div class="per"></div>
+        <div class="per"></div>
+        <div class="emp"></div>
+    </div>
+
+    <!--
+        注意：
+          1.clear作用于元素本身，而并非父标签。
+          2.clear并不能清除浮动，只能让标签不受附近浮动标签的影响
+    -->
 </body>
 </html>
