@@ -27,19 +27,20 @@
     标签中的style属性用于帮助标签定义内嵌样式，内嵌样式格式如下例所示，
     使用style作为标记，在内部写入格式如： key:value; 的数据对象来表示
     具体的样式。
+    
+```
+    <div style="color: red;">
+        Hello World !
+    </div>
+```
 
-    ```
-        <div style="color: red;">
-            Hello World !
-        </div>
-    ```
     在标签很多的情况下，如果大量在页面中堆叠内嵌样式，则会使得页面臃肿
     冗余，如下例：
 
-    ```
-        <div style="width: 100px; height: 100px; color: red; background-color: green; font-size: 20px; font-weight: bold; line-height: 20px; text-align: center;">
-        大量堆积内嵌样式
-        </div>
-    ```
+```
+    <div style="width: 100px; height: 100px; color: red; background-color: green; font-size: 20px; font-weight: bold; line-height: 20px; text-align: center;">
+    大量堆积内嵌样式
+    </div>
+```
 
 
