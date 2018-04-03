@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>浮动</title>
+</head>
+<body>
+    <!--
+    浮动是网页布局中非常重要的一个概念，浮动经常用于控制HTML标签
+    进行横向排列。
+    因为内联标签本身就是水平横向排列的，所以浮动常用于块状标签，如
+    果在内联标签上使用浮动，会使得浮动标签隐式转换成块状。
+    -->
+
+    <style>
+        .test01{
+            width: 100px;
+            height: 100px;
+            background: red;
+            margin: 20px;
+        }
+    </style>
+
+    <div class="test01"></div>
+    <div class="test01"></div>
+    <div class="test01"></div>
+    
+    <!--
+    浮动属性在标准的布局中的确产生了“浮动”，因为块标签在网页中各占一
+    行，浮动属性会强迫HTML标签填充左、右方空白区域。
+    “浮动”的HTML标签存在一些副作用行为，例：
+        1.浮动标签（例如向左浮动）左方未浮动的标签会被浮动标签覆盖
+        2.未浮动的父标签中，如果存在子标签，父标签无法被撑开（默认
+        情况下，父标签如果不设置高度，父标签的高度与子标签的垂直高
+        度总合相等）
+    -->
+</body>
+</html>
