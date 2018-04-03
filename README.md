@@ -1,2 +1,4 @@
-# couse-of-CSS
-couse of css
+# 《十分钟快速入门CSS》
+## 本节课是介绍CSS的基础入门课，内容简短丰富，快速带您进入并了解CSS世界。
+
+
