@@ -8,8 +8,77 @@
 </head>
 <body>
     <!--
-        定位属性可以设置标签元素在网页中的位置，配合层级属性使用。
-        
+        定位属性可以打破标准布局流，在网页中任意位置进行布局，配合
+        层级属性可以实现多层级标签叠加行为。 
+        定位属性提供了三个属性值（相对定位、绝对定位、固定定位）：
+          position: relative;
+          position: absolute;
+          position: fixed;
+
+        定位属性配合：top、right、bottom、left属性进行位置偏移。  
+    -->
+
+    <!--
+        1. 层级
+           网页中默认层级关系是写在下面的HTML（定位）标签层级大于
+           之前的HTML（定位）标签。
+           我们也可以利用index属性进行自定义层级设置
+    -->
+
+    <style>
+        .aa{
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: relative;
+        }
+
+        .bb{
+            width: 100px;
+            height: 100px;
+            background: blue;
+            position: relative;
+            top: -20px;
+            left: -20px;
+        }
+              
+    </style>
+
+    <div class="aa"></div>
+    <div class="bb"></div>
+
+    <!--
+        2. z-index属性可以根据开发者的需求去控制层级，HTML标签的默认
+        层级是0，所以我们如果想要让其他层级覆盖当前层级，只需要将层
+        级z-index的参数值大于当前层级数即可。
+    -->
+
+
+    <style>
+        .cc{
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: relative;
+            z-index: 1;
+        }
+
+        .dd{
+            width: 100px;
+            height: 100px;
+            background: blue;
+            position: relative;
+            top: -40px;
+            left: -40px;
+        }
+              
+    </style>
+
+    <div class="cc"></div>
+    <div class="dd"></div>    
+    
+    <!--
+        定位
     -->
 </body>
 </html>
