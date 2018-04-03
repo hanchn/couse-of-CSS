@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>边框与行高</title>
+  <title>边框与文本</title>
 </head>
 <body>
   <!--
@@ -14,12 +14,18 @@
     line-height：定义（块）标签中文字的行高，如果
     行高恰好与HTML标签高度相等，则表示文字在HTML标
     签中居中。
+    text-align：用于设置文本在水平方向的排版
+    参数值有：
+       1. 文本居左
+       2. 文本居中
+       3. 文本居右
   -->
   <style>
     .test1{
       width: 100px;
       height: 40px;
       line-height: 40px;
+      text-align: center; 
       color: red;
       border-width: 1px; /* 边框粗细 */
       border-color: blue; /* 边框颜色 */

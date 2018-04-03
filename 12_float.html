@@ -12,6 +12,9 @@
     进行横向排列。
     因为内联标签本身就是水平横向排列的，所以浮动常用于块状标签，如
     果在内联标签上使用浮动，会使得浮动标签隐式转换成块状。
+    浮动属性拥有两个基本参数值：
+    float:left; //左浮动
+    floet:right; //右浮动
     -->
 
     <style>
@@ -20,6 +23,7 @@
             height: 100px;
             background: red;
             margin: 20px;
+            float: left;
         }
     </style>
 
@@ -35,6 +39,47 @@
         2.未浮动的父标签中，如果存在子标签，父标签无法被撑开（默认
         情况下，父标签如果不设置高度，父标签的高度与子标签的垂直高
         度总合相等）
+        以下是问题重现示例：
     -->
+
+    <!--
+        问题1重现示例：
+           绿色HTML标签被之前浮动的红色区块覆盖
+    -->
+
+    <style>
+       .bro{
+           width: 200px;
+           height: 200px;
+           background: green;
+           color: #FFF;
+           font-size: 30px;
+       }
+    </style>
+
+    <div class="bro">测试被覆盖</div>
+
+    <!-- 
+        问题2重现示例：
+           父标签无法拥有高度（无法被子标签撑开）
+    -->
+    <style>
+      .per{
+          width: 200px;
+          height: auto; 
+          border: 2px solid #000;
+          margin: 100px;
+      }
+
+      .son{
+          width: 50px;
+          height: 50px;
+          background: #CCC;
+          float: left;
+      }
+    </style>
+    <div class="per">
+        <div class="son"></div>
+    </div>
 </body>
 </html>
