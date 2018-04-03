@@ -4,7 +4,7 @@
 
 ### 目录
 
-* 内嵌样式
+* [内嵌样式]http://www.baidu.com
 * 样式标签
 * ID名
 * Class名
