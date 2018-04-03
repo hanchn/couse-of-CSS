@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>解决浮动影响</title>
+</head>
+<body>
+    <!--
+       clear属性用于解决浮动所带来的影响，国内很多文章都直译为
+       清除浮动，其实是不对的，clear并不能清除浮动。 
+       clear属性拥有三个基本的属性值：
+         clear:left; // 用于解决来自左侧浮动标签的影响
+         clear:right; // 用于解决来自右侧浮动标签的影响
+         clear:both; // 用于解决来自左右两侧浮动标签的影响
+    -->
+
+    <style>
+    .aa{
+        width:60px;
+        height: 60px;
+        background: green;
+        border: 2px solid #000;
+        float: left;
+    }
+
+    .bb{
+        width: 100px;
+        height: 100px;
+        background: red;
+        margin: 10px;
+        clear: left;
+    }
+    </style>
+
+    <div class="aa"></div>
+    <div class="bb"></div>
+
+</body>
+</html>
